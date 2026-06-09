@@ -1,5 +1,6 @@
 import axios from 'axios';
 
+// Vite correctly injects your Render URL here in production, or defaults to local port 8000
 const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
 
 const api = axios.create({
@@ -11,7 +12,8 @@ const api = axios.create({
 
 export const predictService = {
   predict: async (text) => {
-    const response = await api.post('/predict', { text });
+    // Updated route path to match your FastAPI router version structure
+    const response = await api.post('/api/v1/predict', { text });
     return response.data;
   },
 
