@@ -1,6 +1,9 @@
 {
-  "buildCommand": "npm install && npm run build",
-  "outputDirectory": "frontend/dist",
-  "framework": "vite"
-  
+  "name": "hinglish-ai-classifier",
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/frontend/$1"
+    }
+  ]
 }
