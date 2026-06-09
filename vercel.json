@@ -1,9 +1,4 @@
 {
-  "name": "hinglish-ai-classifier",
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/frontend/$1"
-    }
-  ]
+  "framework": "vite",
+  "rootDirectory": "frontend"
 }
