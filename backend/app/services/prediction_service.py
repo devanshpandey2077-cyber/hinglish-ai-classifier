@@ -1,4 +1,4 @@
-import torch
+#import torch
 import numpy as np
 from app.core.config import DEVICE, CLASS_LABELS
 
