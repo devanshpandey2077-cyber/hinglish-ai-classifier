@@ -1,0 +1,11 @@
+{
+  "bos_token": "[CLS]",
+  "cls_token": "[CLS]",
+  "eos_token": "[SEP]",
+  "mask_token": "[MASK]",
+  "model_max_length": 512,
+  "pad_token": "[PAD]",
+  "sep_token": "[SEP]",
+  "tokenizer_class": "DistilBertTokenizer",
+  "unk_token": "[UNK]"
+}
