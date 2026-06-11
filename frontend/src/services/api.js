@@ -1,6 +1,5 @@
 import axios from 'axios';
 
-// Updated directly to your working classifier-3 link
 const API_URL = "https://hinglish-ai-classifier-3.onrender.com";
 
 const api = axios.create({
@@ -12,13 +11,13 @@ const api = axios.create({
 
 export const predictService = {
   predict: async (text) => {
-    // Maps perfectly to your FastAPI router
-    const response = await api.post('/api/v1/predict', { text });
+    // 🎯 TRY STEP 1: Changed from '/api/v1/predict' to '/predict'
+    // (If your router doesn't use version prefixes, this hits it instantly)
+    const response = await api.post('/predict', { text });
     return response.data;
   },
 
   health: async () => {
-    // Hits the verified root path which returned 200 OK in your logs
     const response = await api.get('/');
     return response.data;
   },
