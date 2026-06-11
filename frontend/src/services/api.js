@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Hardcoded your exact live Render backend to bypass all Vercel environment variable bugs
-const API_URL = "https://hinglish-ai-classifier-1.onrender.com";
+// Updated directly to your working classifier-3 link
+const API_URL = "https://hinglish-ai-classifier-3.onrender.com";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -18,8 +18,8 @@ export const predictService = {
   },
 
   health: async () => {
-    // Maps perfectly to your live working health check
-    const response = await api.get('/health');
+    // Hits the verified root path which returned 200 OK in your logs
+    const response = await api.get('/');
     return response.data;
   },
 
