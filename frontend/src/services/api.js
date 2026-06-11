@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-// Vite correctly injects your Render URL here in production, or defaults to local port 8000
-const API_URL = import.meta.env.VITE_API_URL || "http://localhost:8000";
+// Hardcoded your exact live Render backend to bypass all Vercel environment variable bugs
+const API_URL = "https://hinglish-ai-classifier-1.onrender.com";
 
 const api = axios.create({
   baseURL: API_URL,
@@ -12,12 +12,13 @@ const api = axios.create({
 
 export const predictService = {
   predict: async (text) => {
-    // Updated route path to match your FastAPI router version structure
+    // Maps perfectly to your FastAPI router
     const response = await api.post('/api/v1/predict', { text });
     return response.data;
   },
 
   health: async () => {
+    // Maps perfectly to your live working health check
     const response = await api.get('/health');
     return response.data;
   },
